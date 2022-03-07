@@ -1,0 +1,24 @@
+<ion-content has-header>
+
+    <div id="container" *ngFor="let s of scheduleArray">
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>{{s.typeschedules.nameType}}</ion-card-title>
+                <hr id="separation-title">
+            </ion-card-header>
+
+            <ion-card-content>
+                <h1><b>>Sala:</b> {{s.rooms.nameRoom}}</h1>
+
+                <h1><b>>Fecha:</b> {{s.date}}</h1>
+
+                <h1><b>>Hora:</b> {{s.hourRange}}</h1>
+
+                <h1><b>>Notas: </b>{{s.note}}
+                </h1>
+
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+</ion-content>

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-
 import { AuthService } from 'src/app/services/auth/auth.service';
-import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
 import { Validators, FormControl, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MenuController } from '@ionic/angular';
 import { User } from 'src/app/models/user/user';
@@ -58,6 +56,7 @@ export class LoginPage implements OnInit {
         return;
       }
 
+
       this.router.navigateByUrl('/home');
 
       this.loginForm.reset();
@@ -85,16 +84,12 @@ export class LoginPage implements OnInit {
         name: null,
         isAdmin: null
       };
-      console.log(socialUser.email);
-      
-
 
       this.authService.login(user).subscribe((res) => {
+        this.router.navigateByUrl('/home');
 
-
-
-        this.router.navigateByUrl('home');
-      });
+      },
+        error => console.log(error));
     });
   }
 

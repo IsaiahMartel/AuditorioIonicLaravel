@@ -21,6 +21,7 @@ export class AuthService {
   }
 
   private getOptions(user: User) {
+  
     this.username=user.email;
     let base64UserAndPassword = window.btoa(user.email + ":" + user.password);
 
@@ -40,6 +41,7 @@ export class AuthService {
 
   register(user: User): Observable<any> {
     //return this.httpClient.post<any>(`${this.AUTH_SERVER_ADDRESS}/api/register/`, JSON.stringify(user))
+    
     return this.httpClient.post<any>(`${this.AUTH_SERVER_ADDRESS}/api/register/`, user)
   }
   //.pipe(

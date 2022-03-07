@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+ion-content {
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    border-width: 0px 1px 1px 1px;
+    border-color: rgb(110,
+    102,
+    102);
+    border-style: solid;
+}
+
+ion-header {
+    height: 65px;
+}
+
+ion-card {
+    border-radius: 0px;
+    box-shadow: 0 0 5px #F7C2C2;
+    background-color: #FEFAFE;
+    font-family: 'Outfit', sans-serif;
+}
+
+ion-card-title,
+ion-card-content {
+    font-family: 'Outfit', sans-serif;
+    color: #464040;
+}
+
+ion-card-title {
+    font-size: 24px;
+}
+
+#separation-title {
+    background-color: #F39FA0;
+}

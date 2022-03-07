@@ -1,4 +1,4 @@
-import { Injectable, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -26,7 +26,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '806724117090-bain010265pcefpqn7hlgipq2b6poecs.apps.googleusercontent.com'
+              '806724117090-s506anh860kjkhrchnlecq6ft12efh3t.apps.googleusercontent.com'
             )
           },]
       } as SocialAuthServiceConfig,

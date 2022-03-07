@@ -10,69 +10,69 @@
 
 
 <ion-content>
+
     <ion-grid>
         <div id="square">
-            <h1 id="welcome-text">¡BIENVENIDO DE NUEVO!</h1>
-
+            <ion-img id="ofgc-logo" src="assets/ofgc-logo-letters.png"></ion-img>
             <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
                 <ion-item id="email-fields">
-                    <ion-label class="label" position="floating" for="project_id">Email</ion-label>
-
-                    <ion-row>
-                        <ion-icon class="musical-note-icon" src="assets/musical-note.svg"></ion-icon>
-                        <ion-input name="email" type="email" placeholder="your@email.com" formControlName="email"
-                            required></ion-input>
+                    <!-- <ion-label class="label" for="project_id">Email</ion-label> -->
 
 
-                    </ion-row>
-                    <span slot="error"
-                        *ngIf="loginForm.controls['email'].errors?.required && loginForm.controls['email']?.touched">Rellene
+                    <ion-icon id="icon-email" name="person-circle-outline"></ion-icon>
+                    <ion-input name="email" type="email" placeholder="Email" formControlName="email" required></ion-input>
+
+
+
+                    <span slot="error" *ngIf="loginForm.controls['email'].errors?.required && loginForm.controls['email']?.touched">Rellene
                         el email</span>
-                    <span slot="error"
-                        *ngIf="loginForm.controls['email'].errors?.pattern && loginForm.controls['email']?.touched">El
+                    <span slot="error" *ngIf="loginForm.controls['email'].errors?.pattern && loginForm.controls['email']?.touched">El
                         email no es válido.</span>
 
                 </ion-item>
                 <ion-item id="password-fields">
-                    <ion-label class="label" position="floating" for="project_id">Contraseña</ion-label>
-                    <ion-row>
-                        <ion-icon class="musical-note-icon" src="assets/musical-note.svg"></ion-icon>
-                        <ion-input name="password" type="password" placeholder="Password" formControlName="password"
-                            required></ion-input>
+                    <!-- <ion-label class="label" for="project_id">Contraseña</ion-label> -->
 
-                    </ion-row>
-                    <span slot="error"
-                        *ngIf="loginForm.controls['password'].errors?.required && loginForm.controls['password']?.touched">Rellene
+                    <!-- <ion-icon class="musical-note-icon" src="assets/musical-note.svg"></ion-icon> -->
+                    <ion-icon id="icon-password" name="lock-closed-outline"></ion-icon>
+                    <ion-input name="password" type="password" placeholder="Password" formControlName="password" required></ion-input>
+
+
+                    <span slot="error" *ngIf="loginForm.controls['password'].errors?.required && loginForm.controls['password']?.touched">Rellene
                         la contraseña</span>
-                    <span slot="error"
-                        *ngIf="loginForm.controls['password'].errors?.minlength && loginForm.controls['password'].touched">La
+                    <span slot="error" *ngIf="loginForm.controls['password'].errors?.minlength && loginForm.controls['password'].touched">La
                         contraseña debe de tener más de 6 caracteres.</span>
                     <span slot="error" *ngIf="loginForm.controls['password'].errors?.maxlength">La contraseña no puede
                         tener más de 12 caracteres.</span>
-                    <!-- <span slot="error" *ngIf="loginForm.controls['password'].errors?.pattern && loginForm.controls['password'].touched" >La contraseña no es válida.</span>-->
+
                 </ion-item>
 
 
-                <!-- <ion-checkbox id="remember-me-checkbox" class="checkbox-square" mode="md">
-            </ion-checkbox>
-            <label for="remember-me-checkbox" id="remember-me-text">Recuérdame</label> --> 
 
-                    <!-- <ion-button type="button" expand="block" color="tertiary" (click)="signInWithGoogle()">
-                        <ion-icon name="logo-google" slot="start"></ion-icon>
-                        Iniciar sesión con Google
-                    </ion-button> -->
 
-                    <h3 id="forgot-password-text">¿Olvidaste la contraseña?</h3>
-                    <button type="submit" id="login-button" class="button" type="submit">ENTRAR</button>
+                <button type="submit" id="login-button" class="button" type="submit">ENTRAR</button>
             </form>
 
+            <div>
+                <h3 id="forgot-password-text">¿Olvidaste la contraseña?</h3>
+                <h2 id="are-you-not-registered-text">¿No te has registrado?
+                    <u id="register-text" routerLink="/register">Regístrate</u>
+                </h2>
 
+            </div>
+
+
+
+            <hr id="or">
+
+            <ion-button id="google-button" color="light" expand="full" (click)="signInWithGoogle()">
+                <ion-icon name="logo-google"></ion-icon>
+                Iniciar sesión con Google
+            </ion-button>
         </div>
 
-        <div>
-            <h2 id="are-you-not-registered-text">¿No te has registrado? </h2>
-            <h2 id="register-text" routerLink="/register">Regístrate</h2>
-        </div>
+
+
 
     </ion-grid>
 

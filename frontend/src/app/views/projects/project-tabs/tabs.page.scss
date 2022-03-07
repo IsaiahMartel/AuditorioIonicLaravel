@@ -1,0 +1,61 @@
+#navbar {
+    border-width: 1px;
+    border-color: rgb(110, 102, 102);
+    border-style: solid;
+    height: 76px;
+}
+
+#header-icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 55px;
+    color: #464040;
+    margin-bottom: 2px;
+}
+
+#go-back-button {
+    vertical-align: middle;
+    color: #464040;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+
+#header-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #464040;
+}
+
+ion-content {
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+ion-tab-bar {
+    height: 70px;
+}
+
+ion-tab-button {
+    border-width: 0px 1px 1px 1px;
+    border-color: rgb(110, 102, 102);
+    border-style: solid;
+}
+
+ion-label {
+    font-size: 3em;
+}
+
+.tabs-icons {
+    font-size: 4em;
+    color: #FF6B89;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}

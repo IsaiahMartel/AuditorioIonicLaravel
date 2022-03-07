@@ -6,55 +6,50 @@ ion-content {
     &::-webkit-scrollbar {
         display: none;
     }
-    border-color: rgb(110,
-    102,
-    102);
+    border-color: var(--ion-color-medium-shade);
     border-style: solid;
     border-width: 0px 1px 1px 1px;
 }
 
 #navbar {
     border-width: 1px;
-    border-color: rgb(110, 102, 102);
+    border-color: var(--ion-color-medium-shade);
     border-style: solid;
     height: 76px;
 }
 
-#home-icon {
+#navbar-icon {
     display: inline-block;
     vertical-align: middle;
     font-size: 50px;
 }
 
-#home-text {
+#navbar-text {
     display: inline-block;
     vertical-align: middle;
     font-size: 30px;
-    color: #464040;
+    color: var(--ion-color-dark-tint);
 }
 
-#menu-icon{
-
+#menu-icon {
     vertical-align: middle;
-    font-size: 40px;
-    color: #464040;
+    font-size: 35px;
+    color: var(--ion-color-dark-tint);
     position: absolute;
-    // float: left !important;
-left: 0;
+    left: 0;
 }
-
 
 #square {
     margin: 15px;
-    background-color: #FEFAFE;
-    box-shadow: 0 0 1px rgb(177, 2, 148);
+    background-color: var(--ion-color-danger-contrast);
+    box-shadow: 0 0 1px var(--ion-color-danger-shade);
     padding-bottom: 30px;
 }
 
 ion-slide {
     height: auto !important;
     height: 100%;
-    box-shadow: 0 0 10px rgb(177, 2, 148);
+    box-shadow: 0 0 10px var(--ion-color-danger-shade);
 }
 
 ion-slides {
@@ -63,24 +58,24 @@ ion-slides {
 
 .performance-card {
     margin: 0;
-    box-shadow: 0 0 1px rgb(177, 2, 148);
+    box-shadow: 0 0 1px var(--ion-color-danger-shade);
     border-width: 0px;
-    border-color: rgb(110, 102, 102);
+    border-color: var(--ion-color-light-tint);
     border-style: solid;
     max-height: 250px !important;
-    background-color: #b419cf17;
+    background-color: var(--ion-color-tertiary-tint);
     border-radius: 0;
     width: 300px;
 }
 
 .essay-card {
     margin: 0;
-    box-shadow: 0 0 1px rgb(248, 161, 0);
+    box-shadow: 0 0 1px var(--ion-color-warning-tint);
     border-width: 0px;
-    border-color: rgb(110, 102, 104);
+    border-color: var(--ion-color-medium-shade);
     border-style: solid;
     max-height: 250px !important;
-    background-color: #f8bf0438;
+    background-color: var(--ion-color-warning-tint);
     border-radius: 0;
     min-width: 250px;
     width: 300px;
@@ -118,9 +113,9 @@ ion-slides {
 }
 
 #separation-in-card {
-    background-color: #000000;
+    background-color: var( --ion-background-color);
 }
 
 #separation-title {
-    background-color: #000000;
+    background-color: var(--ion-color-success-contrast);
 }

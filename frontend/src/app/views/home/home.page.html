@@ -3,29 +3,25 @@
     <ion-toolbar id="navbar">
         <ion-menu-button id="home-menu-container">
             <ion-icon id="menu-icon" name="menu-outline"></ion-icon>
-            <ion-icon id="home-icon" src="assets/home8.svg"></ion-icon>
-            <h2 id="home-text">Inicio</h2>
+
+            <!-- <ion-icon id="navbar-icon" src="assets/home8.svg"></ion-icon> -->
+            <h2 id="navbar-text">Inicio</h2>
         </ion-menu-button>
     </ion-toolbar>
 </ion-header>
 
 <ion-content class='has-header has-subheader'>
-    <!-- <div class="text-center" id=#square> -->
-
     <ion-grid id="square">
         <ion-row>
             <ion-icon class="perfomance-icon" src="assets/director.svg"></ion-icon>
             <h2 class="event-type-text"><b>Actuaciones</b></h2>
-
         </ion-row>
 
         <ion-row>
             <ion-slides>
                 <ng-container *ngFor="let perfomance of scheduleArray">
-
                     <ion-slide *ngIf="perfomance.typeschedules.nameType=='Concierto'">
                         <ion-card class="performance-card" routerLink="/tabs/calendar/{{perfomance.projects.id}}">
-
                             <ion-card-header>
                                 <ion-card-title>{{perfomance.projects.nameProject}}</ion-card-title>
                                 <ion-card-subtitle>{{perfomance.date}}</ion-card-subtitle>
@@ -57,8 +53,7 @@
                 <ng-container *ngFor="let essay of scheduleArray">
 
 
-                    <ion-slide
-                        *ngIf="essay.typeschedules.nameType=='Ensayo AM' || essay.typeschedules.nameType=='Ensayo PM' || essay.typeschedules.nameType=='Ensayo General'">
+                    <ion-slide *ngIf="essay.typeschedules.nameType=='Ensayo AM' || essay.typeschedules.nameType=='Ensayo PM' || essay.typeschedules.nameType=='Ensayo General'">
                         <ion-card class="essay-card" routerLink="/tabs/calendar/{{essay.projects.id}}">
                             <ion-card-header>
                                 <ion-card-title>{{essay.projects.nameProject}}</ion-card-title>

@@ -11,37 +11,20 @@
 
 
 <ion-content>
-
-    <!-- 
-        <ion-item class="ion-no-padding" lines="none" routerLink="/projects" #holdBtn>
-            <ion-icon id="projects-icon" src="assets/projects-color-icon.svg"></ion-icon>
-            <h2 id="projects-text">Proyectos</h2>
-        </ion-item>
-  -->
-
-
     <div id="container" *ngFor="let p of projectsArray">
-
-
-        <ion-card  routerLink="/tabs/calendar/{{p.id}}" #holdBtn>
-
+        <ion-card routerLink="/tabs/calendar/{{p.id}}" #holdBtn>
             <ion-card-header>
                 <ion-row>
                     <ion-card-subtitle>> {{p.startDateProject}} - {{p.endDateProject}}</ion-card-subtitle>
-
-
                     <ion-card-subtitle id="season-text"> {{p.seasons.NameSeason}}</ion-card-subtitle>
-
                 </ion-row>
                 <ion-card-title>{{p.nameProject}}</ion-card-title>
             </ion-card-header>
 
             <ion-card-content>
                 {{p.orchestrationProject}}
-
-
             </ion-card-content>
-   
+
         </ion-card>
         <hr id="separation-title">
     </div>

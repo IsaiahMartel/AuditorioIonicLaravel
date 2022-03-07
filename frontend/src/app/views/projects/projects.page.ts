@@ -1,12 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Projects } from '../../models/projects';
-import { ProjectsService } from '../../services/projects.service';
-import { Browser } from '@capacitor/browser';
+import { ProjectsService } from '../../services/projects/projects.service';
 import { PdfService } from 'src/app/services/pdf/pdf.service';
 import { GestureController, MenuController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { PdfProjectModalPage } from '../pdf-project-modal/pdf-project-modal/pdf-project-modal.page';
+import { EventsOrWorksModal } from './reports/events-or-works-modal/events-or-works-modal.page';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -27,7 +26,11 @@ export class ProjectsPage implements AfterViewInit {
   public projects: Projects;
   projectId: number;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private projectsService: ProjectsService, private pdfService: PdfService, private gestureCtrl: GestureController, private modalController: ModalController, private alertController: AlertController) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private router: Router, private projectsService: ProjectsService,
+    private pdfService: PdfService, private gestureCtrl: GestureController,
+    private modalController: ModalController,
+    private alertController: AlertController) { }
 
   ngOnInit(): void {
   }
@@ -51,15 +54,12 @@ export class ProjectsPage implements AfterViewInit {
               this.longPressActive = false;
 
             }
-          }, true); // Passing true will run the gesture callback inside of NgZone!
+          }, true);
 
-          // Don't forget to enable!
           longPress.enable(true);
         }
       })
       );
-
-
   }
 
   increase(timeout = 200) {
@@ -78,10 +78,9 @@ export class ProjectsPage implements AfterViewInit {
     }
   }
 
-
   async openModal() {
     const modal = await this.modalController.create({
-      component: PdfProjectModalPage,
+      component: EventsOrWorksModal,
       handle: false,
       initialBreakpoint: 0.22,
       breakpoints: [0, 0.22],
@@ -91,20 +90,9 @@ export class ProjectsPage implements AfterViewInit {
 
     if (!this.modalOpen) {
       this.modalOpen = true;
-
-
-
       return await modal.present();
-
-
     }
-
-
-    //  await modal.onWillDismiss().then((o) => { console.log(o) })
   }
-
-
-
 
   loadInfo() {
 
@@ -123,14 +111,10 @@ export class ProjectsPage implements AfterViewInit {
         let errorMessage = ""
         Object.values(errorJSON).forEach(element => errorMessage += element + "\n");
 
-
-
         this.presentAlert(errorMessage);
       })
     }
-
     )
-
   }
 
   async presentAlert(message: string) {
@@ -144,9 +128,6 @@ export class ProjectsPage implements AfterViewInit {
 
     await alert.present();
   }
-
-
-
 }
 
 

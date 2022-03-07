@@ -1,57 +1,51 @@
 <ion-header>
-
-  <ion-toolbar id="navbar">
-    <ion-icon id="go-back-button" name="arrow-back-outline" routerLink="/home"></ion-icon>
-      <ion-icon id="header-icon" src="assets/login-icon.svg"></ion-icon>
-      <h2 id="header-text">Registrarse</h2>
-
-  </ion-toolbar>
+    <ion-toolbar id="navbar">
+        <ion-icon id="go-back-button" name="arrow-back-outline" routerLink="/login"></ion-icon>
+        <ion-icon id="header-icon" src="assets/login-icon.svg"></ion-icon>
+        <h2 id="header-text">Registrarse</h2>
+    </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-  <div id="square">
-    <form [formGroup]="registerForm" (ngSubmit)="register()" novalidate>
-      <ion-item>
-        <ion-label position="floating" for="project_id">
-          Nombre
-        </ion-label>
-        <ion-input id="project-id" type="text" formControlName="name" required></ion-input>
-      </ion-item>
-   
+    <div id="square">
+        <form [formGroup]="registerForm" (ngSubmit)="register()" novalidate>
+            <ion-item>
+                <ion-label position="floating" for="project_id">
+                    Nombre
+                </ion-label>
+                <ion-input id="project-id" type="text" formControlName="name" required></ion-input>
+            </ion-item>
 
-      <ion-item>
-        <ion-label position="floating" for="project_id">
-          Email
-        </ion-label>
-        <ion-input name="email" type="email" formControlName="email" required></ion-input>
-        <span slot="error" *ngIf="registerForm.controls['email'].errors?.required && registerForm.controls['email'].touched">Rellene el email</span>
-        <span slot="error" *ngIf="registerForm.controls['email'].errors?.pattern && registerForm.controls['email'].touched">El email no es válido.</span>
-      </ion-item>
+            <ion-item>
+                <ion-label position="floating" for="project_id">
+                    Email
+                </ion-label>
+                <ion-input name="email" type="email" formControlName="email" required></ion-input>
+                <span slot="error" *ngIf="registerForm.controls['email'].errors?.required && registerForm.controls['email'].touched">Rellene el email</span>
+                <span slot="error" *ngIf="registerForm.controls['email'].errors?.pattern && registerForm.controls['email'].touched">El email no es válido.</span>
+            </ion-item>
 
-      <ion-item>
-        <ion-label position="floating" for="project_id">
-          Contraseña
-        </ion-label>
-        <ion-input name="password" type="password" formControlName="password" required></ion-input>
-        <span slot="error" *ngIf="registerForm.controls['password'].errors?.required && registerForm.controls['password'].touched">Rellene la contraseña</span>
-        <span slot="error" *ngIf="registerForm.controls['password'].errors?.minlength && registerForm.controls['password'].touched" >La contraseña debe de tener más de 6 caracteres.</span>
-        <span slot="error" *ngIf="registerForm.controls['password'].errors?.maxlength" >La contraseña no puede tener más de 12 caracteres.</span>
-        <!-- <span slot="error" *ngIf="registerForm.controls['password'].errors?.pattern && registerForm.controls['password'].touched" >La contraseña no es válida.</span> -->
-      </ion-item>
+            <ion-item>
+                <ion-label position="floating" for="project_id">
+                    Contraseña
+                </ion-label>
+                <ion-input name="password" type="password" formControlName="password" required></ion-input>
+                <span slot="error" *ngIf="registerForm.controls['password'].errors?.required && registerForm.controls['password'].touched">Rellene la contraseña</span>
+                <span slot="error" *ngIf="registerForm.controls['password'].errors?.minlength && registerForm.controls['password'].touched">La contraseña debe de tener más de 6 caracteres.</span>
+                <span slot="error" *ngIf="registerForm.controls['password'].errors?.maxlength">La contraseña no puede tener más de 12 caracteres.</span>
+            </ion-item>
 
-      <ion-item>
-        <ion-label position="floating" for="project_id">
-          Repita la contraseña
-        </ion-label>
-        <ion-input name="confirmPassword" type="password" formControlName="confirmPassword" required>
-        </ion-input>
-        <span slot="error" *ngIf="registerForm.controls['confirmPassword'].hasError('incorrect') && registerForm.controls['confirmPassword'].touched" >Las contraseñas no coinciden</span>
-       
-      </ion-item>
-    
-      <button id="register-button" type="submit" class="button" type="submit">REGISTRARSE</button>
-    </form>
-  </div>
+            <ion-item>
+                <ion-label position="floating" for="project_id">
+                    Repita la contraseña
+                </ion-label>
+                <ion-input name="confirmPassword" type="password" formControlName="confirmPassword" required>
+                </ion-input>
+                <span slot="error" *ngIf="registerForm.controls['confirmPassword'].hasError('incorrect') && registerForm.controls['confirmPassword'].touched">Las contraseñas no coinciden</span>
+            </ion-item>
+
+            <button id="register-button" type="submit" class="button" type="submit">REGISTRARSE</button>
+        </form>
+    </div>
 
 </ion-content>

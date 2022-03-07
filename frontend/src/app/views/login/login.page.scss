@@ -11,7 +11,6 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 45px;
-    
     color: #464040;
     margin-bottom: 2px;
 }
@@ -39,16 +38,18 @@ ion-content {
 }
 
 #square {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;
     border-width: 1px;
     border-color: black;
     border-style: solid;
     background-color: white;
-    padding: 20px;
-    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     border-radius: 4px;
+    text-align: center;
 }
 
 h1,
@@ -57,9 +58,26 @@ h3 {
     font-family: 'Outfit', sans-serif;
 }
 
+#ofgc-logo {
+    padding: 2%;
+    text-align: center;
+    width: 50%;
+}
+
 #welcome-text {
     text-align: center;
-    margin-top: 25px;
+    font-size: 2em;
+}
+
+#google-button {
+    background-color: white !important;
+    color: white !important;
+    text-align: center;
+}
+
+#o {
+    margin-top: 10%;
+    line-height: 1px;
 }
 
 .musical-note-icon {
@@ -67,84 +85,80 @@ h3 {
 }
 
 .label {
-    font-size: 1.8em;
-    margin-left: 10px;
-
-  text-align: center;
+    font-size: 1.5em;
+    margin-left: 60px;
     font-family: 'Outfit', sans-serif;
-    margin-bottom: 0px;
 }
 
-input {
+ion-input {
     border-right: none !important;
     border-left: none !important;
-    margin-left: 10px;
-    height: 2.2em;
-    margin-top: 5.3px;
+    // height: 2.2em;
     width: 230px;
+    font-size: 1.4em;
 }
 
-#email-fields{
-    margin-top: 10%;
+#email-fields {
+    margin-top: 2%;
+    // border: 1px solid black;
 }
 
+#password-fields {
+    margin-top: 5%;
+}
 
-#password-fields{
-    margin-top: 15%;
+#icon-email {
+    // border-right: 1px solid black;
+}
 
+#forgot-password-text {
+    color: #0099FF;
+    display: block;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    font-size: 1.2em;
 }
 
 #login-button {
-    width: 80%;
-    height: 60px;
+    width: 50%;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.5em;
-    margin-top: 20%;
+    font-size: 1.3em;
     display: block;
     border-width: 1px;
-    border-color: black;
+    border-color: rgb(148, 147, 147);
     border-style: solid;
     font-family: 'Outfit', sans-serif;
     background-color: #ffffff;
     box-shadow: 0 0 1px black;
     border-radius: 4px;
-    margin-bottom: 10%;
-}
-
-// ion-checkbox {
-//     display: inline-block;
-//     text-align: center;
-//     margin-bottom: 10px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     vertical-align: middle;
-// }
-// #remember-me-text {
-//     display: inline-block;
-//     text-align: center;
-//     font-size: 1.3em;
-//     vertical-align: middle;
-// }
-#forgot-password-text {
-    color: #0099FF;
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5%;
 }
 
 #are-you-not-registered-text {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 1.2em;
 }
 
 #register-text {
     text-align: center;
     color: #0099FF;
     margin: 0;
+    font-size: 1em;
 }
 
 #register-text:hover {
     font-weight: bold;
     text-decoration: underline;
+}
+
+#or {
+    background-color: black;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }

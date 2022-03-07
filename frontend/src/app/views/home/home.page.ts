@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Schedule } from '../../models/schedule';
-import { SchedulesService } from '../../services/schedule.service';
+import { SchedulesService } from 'src/app/services/schedule/schedule.service';
 import { Projects } from '../../models/projects';
-import { ProjectsService } from '../../services/projects.service';
-import { Observable } from 'rxjs';
+import { ProjectsService } from '../../services/projects/projects.service';
 import { AlertController } from '@ionic/angular';
 
 @Component({
